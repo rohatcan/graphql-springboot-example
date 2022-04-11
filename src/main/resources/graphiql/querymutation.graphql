@@ -1,0 +1,41 @@
+mutation CREATE_PLAYER {
+    createPlayer(input: {
+        firstName: "Rohat",
+        lastName: "Can",
+        position: C
+    }){
+        id,
+        firstName,
+        lastName
+    }
+
+}
+
+
+query GET_PLAYER {
+    player(id: 1)
+    {
+        id,
+        firstName,
+        lastName
+    }
+}
+
+query GET_ALL_PLAYERS {
+    players
+    {
+        id,
+        firstName,
+        lastName,
+        position
+    }
+}
+
+query GET_ALL_PLAYERS_BY_POSITION {
+    playersByPosition(position: C)
+    {
+        id,
+        firstName,
+        lastName
+    }
+}
